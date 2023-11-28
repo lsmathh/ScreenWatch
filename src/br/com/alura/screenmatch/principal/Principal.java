@@ -65,7 +65,7 @@ public class Principal {
             if(item instanceof Filme filme && filme.getClassificacao() > 2){
                 System.out.println("Classificação: " + filme.getClassificacao());
             }else{
-                System.out.println("Este título não possui classificação!");
+                System.out.println("Este título não possui classificação! ");
             }
         }
 
