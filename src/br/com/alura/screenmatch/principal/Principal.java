@@ -1,8 +1,11 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 
@@ -50,12 +53,21 @@ public class Principal {
         Filme filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.avalia(10);
 
-        ArrayList<Filme> listaFilmes = new ArrayList<>();
+
+        ArrayList<Titulo> listaFilmes = new ArrayList<>();
         listaFilmes.add(filmeDoPaulo);
         listaFilmes.add(meuFilme);
         listaFilmes.add(outroFilme);
+        listaFilmes.add(lost);
 
-        System.out.println(listaFilmes);
+        for(Titulo item : listaFilmes){
+            System.out.println("Nome: " + item.getNome());
+            if(item instanceof Filme filme && filme.getClassificacao() > 2){
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }else{
+                System.out.println("Este título não possui classificação!");
+            }
+        }
 
 
     }
