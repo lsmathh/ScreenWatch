@@ -7,7 +7,7 @@ public class Filme extends Titulo implements Classificavel {
 
     public Filme(String nome, int anoDeLancamento) {
         super(nome, anoDeLancamento);
-       
+        System.out.println("oi");
     }
 
     public String getDiretor() {
